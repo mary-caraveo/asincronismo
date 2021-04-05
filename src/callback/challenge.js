@@ -33,12 +33,6 @@ fetchData(API, function (error1, data1) { // primero buscamos la lista de person
             console.log(data1.info.count);
             console.log(data2.name);
             console.log(data3.dimension);
-
-            // rutas de las peticiones en orden
-            // console.log(api);
-            // console.log(api + data1.results[0].id);
-            // console.log(data2.origin.url);
-
         });
     });
 });
