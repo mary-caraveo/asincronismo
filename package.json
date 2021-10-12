@@ -1,7 +1,7 @@
 {
-  "name": "asincronismo",
+  "name": "Asincronismo",
   "version": "1.0.0",
-  "description": "Curso de Asincronismo con JavaScript",
+  "description": "Asincronismo con JavaScript",
   "main": "index.js",
   "scripts": {
     "callback": "node src/callback/index.js",
@@ -11,7 +11,7 @@
     "async": "node src/async/index.js",
     "async:challenge": "node src/async/challenge.js"
   },
-  "author": "Maria Caraveo",
+  "author": "Guadalupe Caraveo",
   "license": "MIT",
   "dependencies": {
     "xmlhttprequest": "^1.8.0"
