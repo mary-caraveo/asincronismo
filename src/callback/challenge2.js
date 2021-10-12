@@ -1,15 +1,15 @@
-const https = require("https");
-const API_BASE = "https://rickandmortyapi.com/api/";
+const https = require('https');
+const API_BASE = 'https://rickandmortyapi.com/api/';
 
 function APIRequest(url, callback) {
   https.get(url, (res) => {
-    res.setEncoding("utf8");
+    res.setEncoding('utf8');
     if (res.statusCode === 200) {
-      let body = "";
-      res.on("data", (data) => {
+      let body = '';
+      res.on('data', (data) => {
         body += data;
       });
-      res.on("end", () => {
+      res.on('end', () => {
         callback(null, JSON.parse(body));
       });
     } else {
@@ -21,10 +21,10 @@ function APIRequest(url, callback) {
   });
 }
 
-APIRequest(API_BASE + "character/", (error, response) => {
+APIRequest(API_BASE + 'character/', (error, response) => {
   if (error) return console.error(error.message);
   APIRequest(
-    API_BASE + "character/" + response.results[0].id,
+    API_BASE + 'character/' + response.results[0].id,
     (error2, response2) => {
       if (error2) return console.error(error2.message);
       APIRequest(response2.origin.url, (error3, response3) => {

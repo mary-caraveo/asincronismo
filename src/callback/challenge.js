@@ -1,18 +1,18 @@
 //Peticiones a APIs usando Callbacks
 //npm install xmlhttprequest --save
-let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+let XMLHttpRequest = require('XMLHttpRequest').XMLHttpRequest;
 
-let API = "https://rickandmortyapi.com/api/character/";
+let API = 'https://rickandmortyapi.com/api/character/';
 
 function fetchData(url_api, callback) {
   let xhttp = new XMLHttpRequest();
-  xhttp.open("GET", url_api, true);
+  xhttp.open('GET', url_api, true);
   xhttp.onreadystatechange = function (event) {
     if (xhttp.readyState === 4) {
       if (xhttp.status === 200) {
         callback(null, JSON.parse(xhttp.responseText));
       } else {
-        const error = new Error("Error " + url_api);
+        const error = new Error('Error ' + url_api);
         return callback(error, null);
       }
     }

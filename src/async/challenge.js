@@ -1,5 +1,5 @@
-const fetchData = require("../utils/fetchData");
-const API = "https://rickandmortyapi.com/api/character/";
+const fetchData = require('../utils/fetchData');
+const API = 'https://rickandmortyapi.com/api/character/';
 
 const anotherFunction = async (url_api) => {
   try {
@@ -15,6 +15,6 @@ const anotherFunction = async (url_api) => {
   }
 };
 
-console.log("Before");
+console.log('Before');
 anotherFunction(API);
-console.log("After");
+console.log('After');

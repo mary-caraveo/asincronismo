@@ -31,8 +31,8 @@ somethingWillHappen2()
 
 Promise.all([somethingWillHappen(), somethingWillHappen2()])
   .then((response) => {
-    console.log("Array of results ", response);
+    console.log('Array of results ', response);
   })
   .catch((err) => {
-    console.error("Error: " + err);
+    console.error('Error: ' + err);
   });
